@@ -11,7 +11,7 @@ export const TestPage = () => {
         async function getData() {
             try {
                 const data = await axios.get("https://any-api.com:8443/http://xkcd.com/info.0.json");
-                setBackendData(data);
+                setBackendData(data.data);
             } catch(e) {
                 console.log('errrrrr', e.name, e.message)
             }
